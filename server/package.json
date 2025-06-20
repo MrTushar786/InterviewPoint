@@ -43,4 +43,10 @@
     "tailwindcss": "^4.1.10",
     "vite": "^6.3.5"
   }
+  "scripts": {
+  "start": "nest start",
+  "start:dev": "nest start --watch",
+  "start:prod": "node dist/main.js",
+  "build": "nest build"
+}
 }
