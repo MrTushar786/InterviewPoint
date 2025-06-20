@@ -1,0 +1,106 @@
+{
+  "hash": "c772c714",
+  "configHash": "967ccf69",
+  "lockfileHash": "2cfadce1",
+  "browserHash": "c72de85f",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "51061fd9",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "adf3693e",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.mjs",
+      "file": "react-router-dom.js",
+      "fileHash": "09225e90",
+      "needsInterop": false
+    },
+    "axios": {
+      "src": "../../node_modules/axios/index.js",
+      "file": "axios.js",
+      "fileHash": "f339929e",
+      "needsInterop": false
+    },
+    "canvas-confetti": {
+      "src": "../../node_modules/canvas-confetti/dist/confetti.module.mjs",
+      "file": "canvas-confetti.js",
+      "fileHash": "3e65b322",
+      "needsInterop": false
+    },
+    "react-ace": {
+      "src": "../../node_modules/react-ace/lib/index.js",
+      "file": "react-ace.js",
+      "fileHash": "2fbffb10",
+      "needsInterop": true
+    },
+    "ace-builds/src-noconflict/mode-java": {
+      "src": "../../node_modules/ace-builds/src-noconflict/mode-java.js",
+      "file": "ace-builds_src-noconflict_mode-java.js",
+      "fileHash": "c190a700",
+      "needsInterop": true
+    },
+    "ace-builds/src-noconflict/mode-python": {
+      "src": "../../node_modules/ace-builds/src-noconflict/mode-python.js",
+      "file": "ace-builds_src-noconflict_mode-python.js",
+      "fileHash": "5b8aaab3",
+      "needsInterop": true
+    },
+    "ace-builds/src-noconflict/mode-c_cpp": {
+      "src": "../../node_modules/ace-builds/src-noconflict/mode-c_cpp.js",
+      "file": "ace-builds_src-noconflict_mode-c_cpp.js",
+      "fileHash": "5eb141da",
+      "needsInterop": true
+    },
+    "ace-builds/src-noconflict/theme-monokai": {
+      "src": "../../node_modules/ace-builds/src-noconflict/theme-monokai.js",
+      "file": "ace-builds_src-noconflict_theme-monokai.js",
+      "fileHash": "c4514861",
+      "needsInterop": true
+    },
+    "ace-builds/src-noconflict/ext-language_tools": {
+      "src": "../../node_modules/ace-builds/src-noconflict/ext-language_tools.js",
+      "file": "ace-builds_src-noconflict_ext-language_tools.js",
+      "fileHash": "3e62a7ae",
+      "needsInterop": true
+    },
+    "html2canvas": {
+      "src": "../../node_modules/html2canvas/dist/html2canvas.esm.js",
+      "file": "html2canvas.js",
+      "fileHash": "b42cb6a9",
+      "needsInterop": false
+    },
+    "jspdf": {
+      "src": "../../node_modules/jspdf/dist/jspdf.es.min.js",
+      "file": "jspdf.js",
+      "fileHash": "f10fb8f1",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "purify.es-DRS7PCQ7": {
+      "file": "purify__es-DRS7PCQ7.js"
+    },
+    "index.es-KKJ2LCUC": {
+      "file": "index__es-KKJ2LCUC.js"
+    },
+    "chunk-SITVF2AJ": {
+      "file": "chunk-SITVF2AJ.js"
+    },
+    "chunk-5HNGYYSW": {
+      "file": "chunk-5HNGYYSW.js"
+    },
+    "chunk-TVFQMRVC": {
+      "file": "chunk-TVFQMRVC.js"
+    },
+    "chunk-G3PMV62Z": {
+      "file": "chunk-G3PMV62Z.js"
+    }
+  }
+}

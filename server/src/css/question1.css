@@ -1,0 +1,279 @@
+/* Wrapper fills entire viewport */
+.layout-wrapper {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: #242424;
+  color: rgba(255, 255, 255, 0.87);
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+/* Sidebar (Left section) */
+.sidebar {
+  width: 35%;
+  background-color: #1a1a1a;
+  /* background: url("../assets/bg.jpg"); */
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 2px solid #3a3a3a;
+}
+
+.sidebar-header {
+  text-align: center;
+}
+
+.sidebar-header h1 {
+  font-size: 3.2em;
+  color: #4ea8ff;
+  margin: 0;
+}
+
+.sidebar-header p {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #bbb;
+}
+
+/* Right Content Area */
+.content-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px 60px 30px 30px; /* Adjusted padding to ensure space for buttons */
+}
+.content-area-div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.form-block-upper{
+  padding: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 50px;
+}
+.formblock-timer p{
+  background: #333333;
+  padding: 10px;
+  border-radius: 10px;
+  color: #FFFFFF ;
+  font-size: 14px;
+}
+/* Form Fields */
+.form-block {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.form-block1 {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.form-block label {
+  margin-right: 20px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.form-block-btn {
+  all: unset;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.form-block-btn:disabled {
+  opacity: 0;
+}
+
+.form-block-btn:hover {
+  border: none;
+  outline: none;
+  animation: none;
+}
+
+.compiler-input {
+  width: 300px; /* Reduced width for tighter fit */
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  background: transparent;
+}
+
+.question-input,
+.answer-textarea {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  background-color: #1f1f1f;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 6px;
+}
+
+.question-input:disabled {
+  background-color: #3e3e3e8f;
+  color: #7a7979;
+  transition: all 0.3s all;
+  cursor: not-allowed;
+}
+
+.question-input:focus,
+.answer-textarea:focus {
+  outline: none;
+  border-color: #4ea8ff;
+  box-shadow: 0 0 5px #4ea8ff80;
+}
+
+.answer-textarea {
+  min-height: 400px;
+  resize: vertical;
+}
+
+.answer-textarea:disabled {
+  background-color: #3e3e3e8f;
+  color: #7a7979;
+  transition: all 0.3s all;
+  cursor: not-allowed;
+}
+
+/* Compiler Styles */
+.compiler {
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+}
+
+.compiler-container {
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  border-radius: 1px solid white;
+}
+
+.compiler-toolbar {
+  display: flex;
+  gap: 10px;
+  padding: 5px 10px; /* Reduced padding for tighter fit */
+  align-items: center;
+}
+.compiler-toolbar textarea{
+  /* border: 1px solid #4ea8ff; */
+  border: 1px solid #4f4f4f9b;
+
+  padding: 10px;
+}
+.run-result {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #1f1f1f;
+  border: 1px solid #444;
+  border-radius: 6px;
+}
+
+.run-result h4 {
+  margin: 0 0 5px;
+  color: #4ea8ff;
+}
+
+.run-result pre {
+  margin: 0;
+  white-space: pre-wrap;
+  color: #fff;
+}
+
+/* Buttons */
+.button-wrap {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto; /* Pushes buttons to the bottom */
+  padding-top: 20px;
+}
+
+.btn-primary-save,
+.btn-primary-next,
+.compiler-run-btn {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 13px 30px; /* Reduced padding for consistency */
+  font-size: 1rem;
+  font-weight: 500;
+  border: 1px solid #4ea8ff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-primary-save:disabled,
+.btn-primary-next:disabled,
+.compiler-run-btn:disabled {
+  background-color: #353535;
+  border: none;
+  opacity: 40%;
+  transition: all 0.2s ease;
+  cursor: no-drop;
+}
+/* 
+.btn-primary-save:hover,
+.btn-primary-next:hover,
+.compiler-run-btn:hover:not(:disabled) {
+  background-color: #4ea8ff;
+  color: #000;
+} */
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid #4ea8ff;
+  color: #4ea8ff;
+}
+
+.btn-outline:hover {
+  background-color: #4ea8ff;
+  color: #000;
+}
+
+textarea:disabled {
+  background-color: rgb(118, 118, 118);
+}
+
+button:disabled {
+  background-color: rgb(118, 118, 118);
+  color: black;
+}
+
+/* Change Ace editor background */
+.ace-monokai {
+  border-bottom: 1px solid rgba(75, 72, 72, 0.212);
+}
+
+.ace-monokai,
+.ace-monokai .ace_gutter,
+.ace-monokai .ace_scroller {
+  background: transparent;
+  color: #ffffff !important;
+}
+
+/* Optional: Better cursor and selection visibility */
+.ace-monokai .ace_marker-layer .ace_selection {
+  background: #333 !important;
+}
+
+.ace-monokai .ace_cursor {
+  color: #ffffff !important;
+}
+
+.ace_print-margin {
+  display: none !important;
+}

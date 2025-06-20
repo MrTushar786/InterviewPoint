@@ -1,0 +1,96 @@
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.quize-cont {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.quize-cont-option {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.quize-cont-sub {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px;
+}
+
+.prev {
+  background: rgba(177, 44, 44, 0.217);
+  border: 1px solid red;
+  opacity: 95%;
+  color: white;
+  transition: all 0.5s ease;
+
+}
+
+.prev:disabled {
+  background: rgba(255, 0, 0, 0.084);
+  border: 1px solid rgba(255, 0, 0, 0.256);
+  opacity: 60%;
+  color: rgba(255, 255, 255, 0.493);
+  transition: all 0.5s ease;
+
+}
+
+.next {
+  background: rgba(27, 63, 153, 0.817);
+  border: 1px solid rgb(88, 128, 214);
+  opacity: 95%;
+  color: white;
+  transition: all 0.5s ease;
+}
+
+.next:disabled {
+  background: rgba(21, 101, 194, 0.347);
+  border: 1px solid rgb(88, 128, 214);
+  opacity: 30%;
+  color: white;
+  transition: all 0.5s ease;
+}
+
+.sub {
+  background: rgba(0, 128, 0, 0.603);
+  border: 1px solid rgb(115, 215, 115);
+  opacity: 95%;
+  color: white;
+}
+
+.clear {
+  background: rgba(128, 128, 128, 0.498);
+  border: 1px solid rgb(200, 185, 185);
+  transition: all 0.5s ease-in;
+}
+
+.clear:disabled {
+  background: rgba(128, 128, 128, 0.498);
+  border: 1px solid rgb(200, 185, 185);
+  opacity: 40%;
+  color: aliceblue;
+  transition: all 0.5s ease-in;
+}
+
+.red{
+  background: rgba(153, 27, 27, 0.817);
+  border: 1px solid rgb(214, 88, 88);
+  opacity: 95%;
+  color: white;
+  transition: all 0.5s ease;  
+}
+.green{
+  background: rgba(35, 153, 27, 0.817);
+  border: 1px solid rgb(88, 214, 126);
+  opacity: 95%;
+  color: white;
+  transition: all 0.5s ease;
+}

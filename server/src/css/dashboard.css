@@ -1,0 +1,437 @@
+/* Dark Mode Dashboard Styling */
+:root {
+  --primary-bg: #1a1a1a;
+  --card-bg: #252526;
+  --text-primary: #ffffff;
+  --text-secondary: #b0b0b0;
+  --accent-color: #0078d4;
+  --border-color: #333333;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --response-bg: #2d2d2d;
+  --input-bg: #333333;
+  --input-border: #444444;
+  --button-bg: #333333;
+  --button-hover-bg: #005a9e;
+  --error-color: #e74c3c;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  background-color: var(--primary-bg);
+  color: var(--text-primary);
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.dashboard-container {
+  max-width: 1400px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--text-primary);
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
+h1::after {
+  content: '';
+  width: 80px;
+  height: 4px;
+  background: var(--accent-color);
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Two-column layout */
+.dashboard-grid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.test-responses {
+  flex: 1.5;
+  min-width: 0;
+  width: 100%;
+}
+
+.right-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  min-width: 0;
+  width: 100%;
+}
+
+.dashboard-card {
+  background: var(--card-bg);
+  border-radius: 10px;
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 6px var(--shadow-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px var(--shadow-color);
+}
+
+.dashboard-card h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 0.75rem;
+}
+.score-card-div{
+  display: flex;
+  gap: 10px;
+
+}
+.score-card h3 {
+
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.dashboard-card p {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.dashboard-card p strong {
+  color: var(--text-primary);
+  font-weight: 500;
+  margin-right: 0.5rem;
+}
+
+.response-container {
+  margin-bottom: 2rem;
+}
+
+.response-text {
+  background: var(--response-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 1.5rem;
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  white-space: pre-wrap;
+  max-height: 400px;
+  overflow-y: auto;
+  line-height: 1.6;
+  font-family: 'Consolas', 'Courier New', monospace;
+}
+
+/* Custom scrollbar for response text */
+.response-text::-webkit-scrollbar {
+  width: 10px;
+}
+
+.response-text::-webkit-scrollbar-track {
+  background: var(--card-bg);
+  border-radius: 5px;
+}
+
+.response-text::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 5px;
+}
+
+.response-text::-webkit-scrollbar-thumb:hover {
+  background: #005a9e;
+}
+
+/* Score Card Styling */
+.score-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.score-input-container {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.score-input-container label {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.score-input {
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: 5px;
+  padding: 0.8rem;
+  font-size: 1rem;
+  color: var(--text-primary);
+  width: 180px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.score-input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 2px rgba(0, 120, 212, 0.2);
+}
+
+.score-input::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.7;
+}
+
+.score-display {
+  font-size: 1.15rem;
+  color: var(--text-primary);
+  margin-top: 0.75rem;
+  padding: 0.5rem 1rem;
+  background: var(--response-bg);
+  border-radius: 4px;
+  display: inline-block;
+}
+
+/* Error Message Styling */
+.error-message {
+  color: var(--error-color);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+/* Buttons Container Styling */
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.action-button {
+  background: var(--button-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.1s ease;
+}
+
+.action-button:hover {
+  background: var(--button-hover-bg);
+  transform: translateY(-2px);
+}
+
+.action-button:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 0 1.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .dashboard-grid {
+    flex-direction: column;
+  }
+
+  .test-responses,
+  .right-section {
+    min-width: 100%;
+    width: 100%;
+  }
+
+  .dashboard-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .score-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .dashboard-card p {
+    font-size: 1rem;
+  }
+
+  .response-text {
+    font-size: 0.95rem;
+    max-height: 300px;
+  }
+
+  .score-input-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+
+  .score-input {
+    width: 100%;
+  }
+
+  .score-display {
+    font-size: 1rem;
+  }
+
+  .buttons-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .action-button {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
+hr {
+  opacity: 0.1;
+  border-color: var(--border-color);
+  margin: 1.5rem 0;
+}
+
+/* PDF Content Styling */
+.pdf-content {
+  position: fixed;
+  top: 0;
+  left: -1000px;
+  width: 794px;
+  padding: 20px;
+  background: white;
+  color: black;
+  z-index: 1;
+  pointer-events: none;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Styling for the heading */
+.pdf-heading {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+}
+
+/* Styling for the info section (Name, Branch, Duration) */
+.pdf-info-section {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+.pdf-info-section p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.pdf-info-section strong {
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+/* Styling for the response section (Questions and Answers) */
+.pdf-response-section {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-left: 4px solid #3498db;
+}
+
+.pdf-response-section p {
+  margin: 8px 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.pdf-response-section strong {
+  font-weight: bold;
+}
+
+.pdf-response-section pre {
+  font-size: 14px;
+  white-space: pre-wrap;
+  margin: 8px 0;
+}
+
+/* Styling for the score section */
+.pdf-score {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #ecf0f1;
+  border-radius: 5px;
+}
+
+.pdf-score p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #2980b9;
+}
+
+/* Styling for the footer */
+.pdf-footer {
+  text-align: center;
+  font-size: 12px;
+  color: #7f8c8d;
+  margin-top: 20px;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 10px;
+}
+
+/* Print styles for PDF compatibility */
+@media print {
+  .pdf-content {
+    position: static;
+    left: 0;
+    width: 794px;
+    box-shadow: none;
+    pointer-events: auto;
+  }
+
+  .pdf-heading {
+    color: #000000;
+  }
+
+  .pdf-info-section,
+  .pdf-response-section,
+  .pdf-score {
+    background-color: transparent;
+  }
+
+  .pdf-footer {
+    color: #000000;
+  }
+}

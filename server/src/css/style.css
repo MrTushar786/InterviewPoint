@@ -1,0 +1,180 @@
+/* Reset default styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Browser Display Styles */
+.page {
+  padding: 20px;
+  background-color: #1a1a1a;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.container {
+  max-width: 600px;
+  width: 100%;
+  position: relative;
+}
+
+.card {
+  background-color: #252526;
+  color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  border: 1px solid #333333;
+}
+
+.heading {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 25px;
+  border-bottom: 3px solid #0078d4;
+  padding-bottom: 10px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.info-section {
+  margin-bottom: 20px;
+}
+
+.info-text {
+  font-size: 16px;
+  margin: 12px 0;
+  color: #b0b0b0;
+}
+
+.info-strong {
+  color: #ffffff;
+  font-weight: 500;
+  margin-right: 8px;
+}
+
+.response-section {
+  background-color: #2d2d2d;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #333333;
+  margin-bottom: 20px;
+}
+
+.response-text {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #b0b0b0;
+}
+
+.response-strong {
+  color: #ffffff;
+  font-weight: 500;
+  margin-right: 8px;
+}
+
+.download-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #0078d4;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Hidden PDF Content Styles */
+.pdf-content {
+  position: absolute;
+  top: -9999px;
+  width: 210mm;
+  min-height: 297mm; /* A4 height */
+  background-color: #ffffff;
+  color: #000000;
+  padding: 20mm;
+  font-family: "Segoe UI", Arial, sans-serif;
+  box-sizing: border-box;
+  page-break-after: always; /* Ensure new page for additional content */
+}
+
+.pdf-heading {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+  border-bottom: 2px solid #0078d4;
+  padding-bottom: 10px;
+  word-wrap: break-word;
+}
+
+.pdf-info-section {
+  margin-bottom: 20px;
+}
+
+.pdf-info-text {
+  font-size: 16px;
+  margin: 8px 0;
+  font-weight: 500;
+  word-wrap: break-word;
+  max-width: 100%;
+}
+
+.pdf-response-section {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  margin-bottom: 20px;
+  page-break-inside: avoid; /* Prevent breaking inside this section */
+}
+
+.pdf-response-text {
+  font-size: 16px;
+  margin: 8px 0;
+  font-weight: 500;
+  word-wrap: break-word;
+  max-width: 100%;
+}
+
+.pdf-answer-text {
+  font-size: 14px;
+  margin: 8px 0;
+  color: #555;
+  white-space: pre-wrap; /* Preserve formatting for large text */
+  word-wrap: break-word;
+  max-width: 100%;
+  max-height: 200mm; /* Limit height to prevent overflow */
+  overflow-y: auto; /* Scroll for very long content */
+  background-color: #ffffff;
+  padding: 10px;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+}
+
+.pdf-score {
+  margin-bottom: 20px;
+}
+
+.pdf-score-text {
+  font-size: 16px;
+  margin: 8px 0;
+  font-weight: 500;
+  word-wrap: break-word;
+}
+
+.pdf-footer {
+  font-size: 12px;
+  text-align: center;
+  color: #777;
+  margin-top: 20px;
+  position: absolute;
+  bottom: 10mm;
+  width: calc(100% - 40mm); /* Adjust for padding */
+}

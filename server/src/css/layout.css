@@ -1,0 +1,126 @@
+/* Layout Styles */
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 10vh;
+}
+
+/* Header */
+.header {
+    background: var(--color-card-dark);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: var(--z-above);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-sm) 0; /* Reduced padding */
+    min-height: 10px; /* Set a smaller min height */
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+.logo-text {
+    font-size: var(--text-xl); /* Slightly smaller */
+    font-weight: 700;
+    color: var(--color-primary);
+    letter-spacing: -0.5px;
+}
+
+.logo-subtitle {
+    font-size: var(--text-xs);
+    color: var(--color-text-secondary);
+    margin-top: -3px;
+}
+
+.nav {
+    display: flex;
+    gap: var(--space-md); /* Reduced gap */
+}
+
+.nav-link {
+    color: var(--color-text-primary);
+    font-weight: 500;
+    transition: color var(--transition-fast);
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--color-primary);
+    transition: width var(--transition-normal);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Main Content */
+.main {
+    flex: 1;
+    padding: var(--space-xl) 0;
+}
+
+/* Footer */
+.footer {
+    background: var(--color-card-dark);
+    padding: var(--space-sm) 0; /* Reduced padding */
+    margin-top: auto;
+    min-height: 32px; /* Set a smaller min height */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-text-secondary);
+    font-size: var(--text-xs); /* Slightly smaller */
+}
+
+/* Page Transitions */
+.page-transition {
+    opacity: 0;
+    animation: fadeIn 0.3s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: var(--space-xs);
+        padding: var(--space-xs) 0;
+        min-height: 36px;
+    }
+    .nav {
+        width: 100%;
+        justify-content: center;
+        gap: var(--space-sm);
+    }
+    .footer {
+        padding: var(--space-xs) 0;
+        min-height: 28px;
+    }
+}
